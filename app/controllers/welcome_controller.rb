@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
+  	@user = User.new
   end
 
   def refer
@@ -8,7 +9,7 @@ class WelcomeController < ApplicationController
 		  value: { url: request.referrer, referrer_id: params[:code] }, 
 		  expires: 1.year.from_now
   	}
-  	redirect_to :new_user_registration
+  	redirect_to :root_path
   end
 
 end

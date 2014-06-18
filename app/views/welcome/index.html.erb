@@ -1,1 +1,4 @@
-<%= cookies %>
+<%= form_for @user do |f| %>
+	<%= f.text_field :email %>
+	<%= f.submit %>
+<% end %>
