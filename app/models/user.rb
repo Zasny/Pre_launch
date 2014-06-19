@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
 
   before_create :assign_token
 
+  def full_name
+    [first_name, last_name].compact.join(" ")
+  end
+
   private
 
   def assign_token
