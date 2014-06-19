@@ -1,13 +1,18 @@
-<%= form_for @user, html: {class: "form-signin"} do |f| %>
+<% if user_signed_in? %>
+	Welcome <%= current_user.full_name %>
+	<p>Refer user with : <%= refer_user_url(code: current_user.tracking_code) %> </p>
+<% else %>
+	<%= form_for @user, html: {class: "form-signin"} do |f| %>
 
-	<legend>Subscribe with us</legend>
+		<legend>Subscribe with us</legend>
 
-	<%= f.text_field :email, class: "form-control", placeholder: "Email" %>
-	<%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
-	<%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+		<%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+		<%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+		<%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
 
-	<br>
+		<br>
 
-	<%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
+		<%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block" %>
 
+	<% end %>
 <% end %>
