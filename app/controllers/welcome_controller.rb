@@ -6,10 +6,10 @@ class WelcomeController < ApplicationController
 
   def refer
   	cookies[:referrer_info] = {
-		  value: { url: request.referrer, referrer_id: params[:code] }, 
+		  value: { sign_up_source: request.referrer, referred_by_id: User.where(tracking_code: params[:code]).first.try(:id) }, 
 		  expires: 1.year.from_now
   	}
-  	redirect_to :root_path
+  	redirect_to :root
   end
 
 end
