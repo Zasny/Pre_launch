@@ -1,7 +1,8 @@
-class UsersController < ApplicationController
+class SubscribeController < ApplicationController
 
 	def create
 		generated_password = Devise.friendly_token.first(8)
+		debugger
 		user = User.create!(user_params.merge({password: generated_password, sign_up_ip: request.ip}).merge(eval(cookies[:referrer_info])))
 
 		Registration.welcome(user, generated_password).deliver
