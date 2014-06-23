@@ -1,8 +1,7 @@
-class SubscribeController < ApplicationController
+class SubscribesController < ApplicationController
 
 	def create
 		generated_password = Devise.friendly_token.first(8)
-		debugger
 		user = User.create!(user_params.merge({password: generated_password, sign_up_ip: request.ip}).merge(eval(cookies[:referrer_info])))
 
 		Registration.welcome(user, generated_password).deliver
@@ -14,7 +13,7 @@ class SubscribeController < ApplicationController
 	private
 
 	def user_params
-    params.require(:user).permit(:email, :first_name, :last_name)
+    params.require(:post).permit(:email, :first_name, :last_name)
   end
 
 end
