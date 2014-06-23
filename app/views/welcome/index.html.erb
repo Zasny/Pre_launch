@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
 	Welcome <%= current_user.full_name %>
 	<p>Refer user with : <%= refer_user_url(code: current_user.tracking_code) %> </p>
+
+	
 <% else %>
 	<%= form_for @user, url: subscribes_path, as: :post, html: {class: "form-signin"} do |f| %>
 

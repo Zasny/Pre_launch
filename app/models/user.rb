@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   before_create :assign_token
+  has_many :referrers, class_name: "User", foreign_key: :referred_by_id
 
   def full_name
     [first_name, last_name].compact.join(" ")
