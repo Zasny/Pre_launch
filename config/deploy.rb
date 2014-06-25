@@ -12,9 +12,9 @@ set :deploy_via, :remote_cache
 set :git_enable_submodules, 1
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "162.243.119.62" # Your HTTP server, Apache/etc
-role :app, "162.243.119.62" # This may be the same as your `Web` server
-role :db, "162.243.119.62", :primary => true # This is where Rails migrations will run
+role :web, "54.254.211.166" # Your HTTP server, Apache/etc
+role :app, "54.254.211.166" # This may be the same as your `Web` server
+role :db, "54.254.211.166", :primary => true # This is where Rails migrations will run
 #role :db, "your slave db-server here"
 
 # If you are using Passenger mod_rails uncomment this:
