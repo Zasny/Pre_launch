@@ -1,0 +1,31 @@
+- if user_signed_in?
+  Welcome, 
+  %b= current_user.full_name
+  %p
+    Refer user with : 
+    = link_to refer_user_url(code: current_user.tracking_code), refer_user_url(code: current_user.tracking_code), target: "_blank"
+
+  %legend My Referrers
+  %ul
+    - if current_user.referrers.blank?
+      %li You dont have any referrers yet
+    - else
+      - current_user.referrers.each do |referrer|
+        %li= "#{referrer.full_name} -> #{referrer.email}"
+
+- else
+  = form_for @user, url: subscribes_path, as: :post, html: {class: "form-signin"} do |f|
+    %legend Subscribe with us
+    = f.text_field :email, class: "form-control", placeholder: "Email"
+    = f.text_field :first_name, class: "form-control", placeholder: "First Name"
+    = f.text_field :last_name, class: "form-control", placeholder: "Last Name"
+
+    %br
+    = f.submit "Submit", class: "btn btn-lg btn-primary btn-block"
+
+    .social-login
+      %span{class: "login-via"} Or login via :
+      %a{href: spree.spree_user_omniauth_authorize_path(provider: "facebook"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Facbook", class: "tooltipped fb"}
+        %i{class: "fa fa-facebook-square"}
+      %a{href: spree.spree_user_omniauth_authorize_path(provider: "google_oauth2"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Google", class: "tooltipped"}
+        %i{class: "fa fa-google-plus"}
