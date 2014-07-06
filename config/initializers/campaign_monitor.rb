@@ -37,3 +37,4 @@ clients = cs.clients
 # CreateSend::Campaign.create(CM_AUTH, "88ddf8c2d7aaad62ed7a36ba879cf54d", "Welcome to Zasny Store", "Pre Launch Subscriber", "Zasny", "welcome@zasny.com", "support@zasny.com", "http://54.254.211.166/404", "", ["ef063a1aa5f8bc72d4bd729b1730bf9e"], [])
 #  => "4743fe83e0345e64ab9def6e57aa0ff5"
 
+# CreateSend::Subscriber.add(CM_AUTH, "ef063a1aa5f8bc72d4bd729b1730bf9e", "ishank_18@yahoo.com", "Ishank Gupta", [], false)
