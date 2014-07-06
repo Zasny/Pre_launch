@@ -1,0 +1,17 @@
+development:
+  facebook_key: 129652407201708
+  facebook_secret: 3576504b0f44911f7d1342fc1460d389
+  twitter_key: cJbrNjPg2X7rjVPpP6eOOw
+  twitter_secret: Jfqbn2QETFbcEq07erps0P6FM41JAQSIX2YZirS4I
+
+test:
+  facebook_key: 129652407201708
+  facebook_secret: 3576504b0f44911f7d1342fc1460d389
+  twitter_key: cJbrNjPg2X7rjVPpP6eOOw
+  twitter_secret: Jfqbn2QETFbcEq07erps0P6FM41JAQSIX2YZirS4I
+
+production:
+  facebook_key: 420687018008922
+  facebook_secret: 155d6eff6a73e33d1bdb85415bd2199b
+  twitter_key: FtPKPRvrAcn0V97Ye4g
+  twitter_secret: du1Vs5MXBiVI6WAYTZRFF87FtxBOCG6Xr6KGKrszF0k 

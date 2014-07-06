@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
       if user.nil?
         user = User.new(
           first_name: auth.extra.raw_info.name.split(" ").first,
-          first_name: auth.extra.raw_info.name.split(" ").last,
+          last_name: auth.extra.raw_info.name.split(" ").last,
           email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
           password: Devise.friendly_token.first(8)
         )
