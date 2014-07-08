@@ -1,6 +1,6 @@
 class Registration < ActionMailer::Base
 
-  default from: "from@example.com"
+  default from: "support@zasny.com"
 
   def welcome(user, password)
     @user = user
