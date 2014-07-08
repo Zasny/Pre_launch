@@ -48,9 +48,15 @@ class User < ActiveRecord::Base
   private
 
   def assign_token
-  	random_code = SecureRandom.hex.upcase[0..5]
+  	random_code = self.first_name.try(:downcase) || self.email.try(:split, "@").try(:first)
+    i = 1
   	while(!User.where(tracking_code: random_code).blank?)
-  		random_code = SecureRandom.hex.upcase[0..5]
+      if(i > 1)
+        random_code = random_code[0...(random_code.length - 1)] + i.to_s
+      else
+        random_code = random_code + i.to_s
+      end
+      i = i + 1
   	end
     self.tracking_code = random_code
   end

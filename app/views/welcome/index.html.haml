@@ -25,7 +25,7 @@
 
     .social-login
       %span{class: "login-via"} Or login via :
-      %a{href: spree.spree_user_omniauth_authorize_path(provider: "facebook"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Facbook", class: "tooltipped fb"}
+      %a{href: user_omniauth_authorize_path(provider: "facebook"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Facbook", class: "tooltipped fb"}
         %i{class: "fa fa-facebook-square"}
-      %a{href: spree.spree_user_omniauth_authorize_path(provider: "google_oauth2"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Google", class: "tooltipped"}
+      %a{href: user_omniauth_authorize_path(provider: "twitter"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Google", class: "tooltipped"}
         %i{class: "fa fa-google-plus"}
