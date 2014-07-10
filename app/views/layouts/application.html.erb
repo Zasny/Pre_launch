@@ -51,7 +51,9 @@
     </div> <!-- /container -->
     <div class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <div class="row">
+          <%= render partial: "shared/footer" %>
+        </div>
       </div>
     </div>
     <%= javascript_include_tag "application" %>
