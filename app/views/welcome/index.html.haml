@@ -28,9 +28,12 @@
         .col-md-3
           = f.submit "Submit", class: "btn btn-primary btn-block"
 
+      .social-logins
         %a{href: user_omniauth_authorize_path(provider: "facebook"), class: "fb col-md-9"}
-          %i{class: "fa fa-facebook-square"}
-          Signup with facebook
+          .content
+            %i{class: "fa fa-facebook-square"}
+            Signup with facebook
         %a{href: user_omniauth_authorize_path(provider: "twitter"), class: "twitter col-md-9"}
-          %i{class: "fa fa-twitter"}
-          Signup with twitter
+          .content
+            %i{class: "fa fa-twitter"}
+            Signup with twitter
