@@ -18,20 +18,23 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar navbar-default navbar-static-top zasny-navbar">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "Zasny", root_path, class: "navbar-brand" %>
+        <a href="/" class="navbar-brand">
+          <%= image_tag "logo.png", class: "logo-image" %>
+        </a>
+        
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav pull-right">
             <% if user_signed_in? %>
               <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
             <% else %>
-              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
             <% end %>
           </ul>
         </div>
@@ -40,17 +43,17 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div><!--/row-->
-
-      <footer>
         
-      </footer>
-
+        <%= bootstrap_flash %>
+        <%= yield %>
+        
+      </div><!--/row-->
     </div> <!-- /container -->
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

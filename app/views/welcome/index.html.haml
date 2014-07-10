@@ -14,16 +14,23 @@
         %li= referrer.email
 
 - else
-  .well
-    %legend Subscribe with us
-    = form_for @user, url: subscribes_path, as: :post, html: {class: "form-signin"} do |f|
-      = f.text_field :email, class: "form-control", placeholder: "Email"
+  .col-md-10.col-md-offset-1.welcome-form
+    .col-md-6.welcome-message-block
+      %h1 The world's premier shoe society!!
+      .message An exclusive shoe collection of irresistible styles at insider prices, handpicked by our fashion experts specially for you.
+      .membership Membership by invitation only
+    .col-md-6.subscribe-form
 
-      %br
-      = f.submit "Submit", class: "btn btn-lg btn-primary btn-block"
+      = form_for @user, url: subscribes_path, as: :post, html: {class: "register-form"} do |f|
+        %h3{class: "col-md-9"} Request an invite
+        .col-md-9
+          = f.text_field :email, placeholder: "Email", class: "form-control"
+        .col-md-3
+          = f.submit "Submit", class: "btn btn-primary btn-block"
 
-      .social-login
-        %a{href: user_omniauth_authorize_path(provider: "facebook"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Facbook", class: "tooltipped fb"}
+        %a{href: user_omniauth_authorize_path(provider: "facebook"), class: "fb col-md-9"}
           %i{class: "fa fa-facebook-square"}
-        %a{href: user_omniauth_authorize_path(provider: "twitter"), "data-toggle" => "tooltip", "data-placement" => "bottom", title: "Login Via Twitter", class: "tooltipped"}
+          Signup with facebook
+        %a{href: user_omniauth_authorize_path(provider: "twitter"), class: "twitter col-md-9"}
           %i{class: "fa fa-twitter"}
+          Signup with twitter
