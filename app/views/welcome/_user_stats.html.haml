@@ -24,6 +24,18 @@
     .progress
       .progress-bar.progress-bar-info{role: "progressbar", "aria-valuenow" => "20", "aria-valuemin" => "0", "aria-valuemax" => "100", style: "width: #{(((current_user.referrers.count * 100)/50) + 20)}%"}
         %span{class: "sr-only"} 20% Complete
-    %h4 Access level
-    %p Major wind currents include the cool Pampero Winds blowing on the flat plains of Patagonia and the Pampas. This invertor is a high effecieny inverter which actually protects your machine as it gives an audible signal in times of short cirtuiting and power overload
-    %p It is most common in late autumn and winter along the central coast and in the Río de la Plata estuary. And the Antarctic region are all represented in its territory.
+    .bar-levels
+      .col-md-4
+        %i{class: "fa fa-caret-up"}
+        .msg PRIORITY
+      .col-md-4
+        %i{class: "fa fa-caret-up"}
+        .msg VIP
+      .col-md-4
+        %i{class: "fa fa-caret-up"}
+        .msg PREMIUM
+      .clearfix
+    .access-level
+      %h4 Access level
+      %p Major wind currents include the cool Pampero Winds blowing on the flat plains of Patagonia and the Pampas. This invertor is a high effecieny inverter which actually protects your machine as it gives an audible signal in times of short cirtuiting and power overload
+      %p It is most common in late autumn and winter along the central coast and in the Río de la Plata estuary. And the Antarctic region are all represented in its territory.
