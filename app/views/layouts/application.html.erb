@@ -16,27 +16,29 @@
     
 
   </head>
-  <body>
+  <body class="<%= (!user_signed_in? && params[:controller] == "welcome") ? "body-with-bg" : "" %>">
 
     <div class="navbar navbar-default navbar-static-top zasny-navbar">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/" class="navbar-brand">
-          <%= image_tag "logo.png", class: "logo-image" %>
-        </a>
-        
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <% if user_signed_in? %>
-              <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-            <% else %>
-              <li><%= link_to "Login", new_user_session_path %></li>
-            <% end %>
-          </ul>
+        <div class="col-md-12">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">
+            <%= image_tag "logo.png", class: "logo-image" %>
+          </a>
+          
+          <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav pull-right">
+              <% if user_signed_in? %>
+                <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+              <% else %>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

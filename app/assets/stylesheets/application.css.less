@@ -15,6 +15,57 @@
  *= require font-awesome
  */
 
+.user-stats {
+  .message {
+    background-color: #2A2A2A;
+    color: #E6E6E6;
+    padding: 15px 30px;
+  }
+  .priority-access {
+    margin-bottom: 20px;
+  }
+  .tracking-url {
+    border-radius: 0;
+    background-color: #F1F1F1;
+  }
+  .social-share {
+    height: 34px;
+    padding-top: 4px;
+    a {
+      color: white;
+      background-color: #2ACAB2;
+    }
+    .share-in-fb {
+      padding: 6px 8px 6px 12px;
+      border-radius: 34px;
+      margin-right: 10px;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+    .share-in-twitter {
+      padding: 6px 7px 6px 9px;
+      border-radius: 34px;
+      font-size: 18px;
+    }
+  }
+  .invite-via-mail {
+    margin-top: 50px;
+    .email-csv {
+      border-radius: 0;
+      height: 45px;
+    }
+    .btn.btn-default {
+      margin-top: 8px;
+      border-radius: 0;
+      background-color: #2ACAB2;
+      color: white;
+      &:hover {
+        background-color: #4BB6A7;
+      }
+    }
+  }
+}
+
 .footer-nav-container {
   text-align: center;
   height: 60px;
@@ -108,7 +159,7 @@
   }
 }
 
-body {
+.body-with-bg {
   background: image-url('background.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
