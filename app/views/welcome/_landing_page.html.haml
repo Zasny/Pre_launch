@@ -8,9 +8,9 @@
     = form_for @user, url: subscribes_path, as: :post, html: {class: "register-form"} do |f|
       %h3{class: "col-md-9 form-title"} Request an invite
       .col-md-9.col-xs-12
-        = f.text_field :email, placeholder: "Email address", class: "form-control input-lg"
+        = f.text_field :email, placeholder: "Email address", class: "form-control input-lg email"
       .col-md-3.col-xs-12
-        = f.submit "Submit", class: "btn btn-default btn-block btn-lg"
+        = f.submit "Submit", class: "btn btn-default btn-block btn-lg submit"
 
     .social-logins
       %a{href: user_omniauth_authorize_path(provider: "facebook"), class: "fb col-md-9 col-xs-6 sl"}
