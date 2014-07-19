@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+  post 'welcome/invite', to: "welcome#invite", as: :invite_users
+
   get ":code", to: "welcome#refer", as: :refer_user
 
   # Example of regular route:

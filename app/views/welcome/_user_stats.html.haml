@@ -16,8 +16,9 @@
         %i{class: "fa fa-twitter"}
 
     .col-md-12.invite-via-mail
-      %input{type: "text", class: "form-control email-csv", placeholder: "Enter your friend's email seperated with comma"}
-      %input{type: "submit", class: "btn btn-default btn-lg", value: "Submit"}
+      = form_tag invite_users_path do 
+        %input{type: "text", name: "emails", class: "form-control email-csv", placeholder: "Enter your friend's email seperated with comma"}
+        %input{type: "submit", class: "btn btn-default btn-lg", value: "Submit"}
 
   .col-md-6
     %h3 You have earned Rs. 500 as credit  
@@ -39,3 +40,4 @@
       %h4 Access level
       %p Major wind currents include the cool Pampero Winds blowing on the flat plains of Patagonia and the Pampas. This invertor is a high effecieny inverter which actually protects your machine as it gives an audible signal in times of short cirtuiting and power overload
       %p It is most common in late autumn and winter along the central coast and in the Río de la Plata estuary. And the Antarctic region are all represented in its territory.
+  .clearfix      

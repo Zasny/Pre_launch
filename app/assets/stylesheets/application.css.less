@@ -15,8 +15,13 @@
  *= require font-awesome
  */
 
-
-
+.body-with-bg {
+  background: image-url('background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 @font-face {
   font-family: 'Caudex';
@@ -30,6 +35,8 @@ body {
 }
 
 .user-stats {
+  background-color: rgba(255,255,255,0.9);
+  padding-bottom: 30px;
   .message {
     background-color: #2A2A2A;
     color: #E6E6E6;
@@ -191,14 +198,6 @@ body {
   .btn {
     border-radius: 0; 
   }
-}
-
-.body-with-bg {
-  background: image-url('background.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .navbar-brand {

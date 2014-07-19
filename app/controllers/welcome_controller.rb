@@ -12,4 +12,14 @@ class WelcomeController < ApplicationController
   	redirect_to :root
   end
 
+  def invite
+    params[:emails].split(",").each do |email|
+      email.strip!
+      if email =~ /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
+        InviteMailer.invite(email, current_user).deliver!
+      end
+    end
+    redirect_to :back, flash: {success: "Successfully invited users"}
+  end
+
 end
