@@ -85,5 +85,5 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     :enable_starttls_auto => false,
     :openssl_verify_mode => 'none'
-  }   
+  }
 end
