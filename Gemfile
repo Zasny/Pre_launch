@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
 
 gem 'capistrano', '~> 2.15'
 gem 'puma'
@@ -8,7 +7,7 @@ gem 'omniauth-createsend'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -50,5 +49,4 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
 gem "letter_opener", :group => :development

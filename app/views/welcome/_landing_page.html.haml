@@ -1,23 +1,23 @@
-.col-md-10.col-md-offset-1.welcome-form
-  .col-md-6.welcome-message-block
+.welcome-form.home_form_wrap
+  .col-md-12.welcome-message-block
     %h1 The world's premier shoe society!!
     .message An exclusive shoe collection of irresistible styles at insider prices, handpicked by our fashion experts specially for you.
     .membership Membership by invitation only
-  .col-md-6.subscribe-form
+  .col-md-12.subscribe-form
 
     = form_for @user, url: subscribes_path, as: :post, html: {class: "register-form"} do |f|
       %h3{class: "col-md-9 form-title"} Request an invite
-      .col-md-9.col-xs-12
+      .col-md-9.col-xs-12.home_form
         = f.text_field :email, placeholder: "Email address", class: "form-control input-lg email"
-      .col-md-3.col-xs-12
+      .col-md-3.col-xs-12.home_button
         = f.submit "Submit", class: "btn btn-default btn-block btn-lg submit"
 
     .social-logins
-      %a{href: user_omniauth_authorize_path(provider: "facebook"), class: "fb col-md-9 col-xs-6 sl"}
+      %a{href: user_omniauth_authorize_path(provider: "facebook"), class: "fb f_left"}
         .content
           %i{class: "fa fa-facebook-square"}
           %span Signup with facebook
-      %a{href: user_omniauth_authorize_path(provider: "twitter"), class: "twitter col-md-9 col-xs-6 sl"}
+      %a{href: user_omniauth_authorize_path(provider: "twitter"), class: "twitter f_right"}
         .content
           %i{class: "fa fa-twitter"}
           %span Signup with twitter
