@@ -137,7 +137,7 @@ body {
   .welcome-message-block {
   	padding:30px;
     background-color: rgba(0, 0, 0, 0.90);
-    height: 260px;
+    /*height: 260px;*/
     h1 {
       color: #22c4b5;
       margin:0px;
@@ -156,7 +156,7 @@ body {
   }
   .subscribe-form {
     background-color: rgba(255, 255, 255, 0.90);;
-    height: 300px;
+    /*height: 300px;*/
     padding:30px;
   }
 
@@ -286,12 +286,35 @@ body {
 .f_left {float:left;}
 .f_right {float:right;}
 .home_form {padding:0px; padding-right:15px;}
-.home_form input {background: #ffffff;
+
+.home_form input, .user-stats input {background: #ffffff;
+border: 2px solid #cccccc;
+font-family: arial;
+font-size: 13px;
+height:44px;}
+.home_form input:focus, .user-stats input:focus {box-shadow:none;}
+
+.home_button {padding:0px; padding-left:15px;}
+.home_button input {font-family:arial; background-color:#22c4b5 !important; text-transform:uppercase; font-size:13px; border:2px solid #22c4b5; height:44px;}
+
+.login_form {text-align:ceter;}
+
+.login_form input[type="email"], .login_form input[type="password"] {background: #ffffff;
 border: 2px solid #ececec;
 font-family: arial;
 font-size: 13px;
-height:50px;}
-.home_button {padding:0px; padding-left:15px;}
-.home_button input {font-family:arial; background-color:#22c4b5 !important; text-transform:uppercase; font-size:13px; border:none;}
+height:44px; width:100%;
+padding: 0px 15px;
+}
+.login_form input[type="submit"], .user-stats input[type="submit"]{font-family:arial; background-color:#22c4b5 !important; text-transform:uppercase; font-size:13px; border:2px solid #22c4b5; height:44px; color:#ffffff; text-align:center; padding:0px 20px;}
+.p_none {padding:0px;}
+.user-stats h1 {margin:0px;}
+.user-stats {max-width: 1000px;
+margin: 0 auto;
+padding-bottom:0px;}
+
+.right_section {border-left:5px solid #ececec; padding-bottom: 20px;}
+p {font-family:arial;}
+
 
  
