@@ -1,9 +1,9 @@
 .welcome-form.home_form_wrap
-  .col-md-12.welcome-message-block
+  .col-md-6.welcome-message-block
     %h1 The world's premier shoe society!!
     .message An exclusive shoe collection of irresistible styles at insider prices, handpicked by our fashion experts specially for you.
     .membership Membership by invitation only
-  .col-md-12.subscribe-form
+  .col-md-6.subscribe-form
 
     = form_for @user, url: subscribes_path, as: :post, html: {class: "register-form"} do |f|
       %h3{class: "col-md-9 form-title"} Request an invite
