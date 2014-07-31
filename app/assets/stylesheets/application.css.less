@@ -51,7 +51,12 @@ body {
   }
   .social-share {
     height: 34px;
+ 
+padding: 0px;
     padding-top: 4px;
+    float: right;
+
+width: 140px;
     a {
       color: white;
       background-color: #2ACAB2;
@@ -202,9 +207,9 @@ body {
       position:relative;
     }
     .twitter .content span, .fb .content span  {
-    position: absolute;
-    top: 20px;
-    left: 50px;
+   position: relative;
+top: -4px;
+left: 0px;
     }
     .fa {
       font-size: 25px;
@@ -315,7 +320,8 @@ padding: 0px 15px;
 .user-stats h1 {margin:0px;}
 .user-stats {max-width: 1000px;
 margin: 0 auto;
-padding-bottom:0px;}
+padding-bottom: 15px;
+margin-bottom: 50px;}
 
 .right_section {border-left:5px solid #ececec; padding-bottom: 20px;}
 p {font-family:arial;}
@@ -339,7 +345,7 @@ padding: 7px;
 width: 100% !important;
 height: 50px;}
 
-.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:16px;}
+.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:-4px;}
 
 .footer {height:auto !important;}
 
@@ -349,15 +355,25 @@ float: left;}
 margin-left: 2px;}
 h1 {font-size:25px;}
 
+.user-stats .social-share {width:115px;}
 .bar-levels .col-md-4 {float:left; padding-right: 12%;}
 
-.welcome-form .welcome-message-block {min-height:220px;}
-.welcome-form .subscribe-form {min-height:220px;}
+.welcome-form .welcome-message-block {min-height:180px;}
+.welcome-form .subscribe-form {min-height:280px;}
+
+.right_section {border-left:0px;}
 
 }
 
 
 @media (max-width: 450px) { 
+.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top: 3px;
+padding-left: 50px;
+display: block;}
+
+}
+
+@media (max-width: 770px) {
 .welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:10px;}
 
 }
