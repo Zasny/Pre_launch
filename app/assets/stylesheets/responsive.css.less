@@ -2,6 +2,9 @@
 	.nav.navbar-nav.pull-right {
 		margin: 5px;
 	}
+	.home_form_wrap {
+		margin: 30px auto !important;
+	}
 	div.welcome-form {
 		margin: 30px 0;
 		
@@ -58,6 +61,9 @@
 			.sl span {
 				top: -1px;
 			}
+			span {
+				padding-left: 35px !important;
+			}
 		}
 		.subscribe-form {
 			height: 230px;
@@ -75,5 +81,52 @@
 	    }
 	  }
 	}
+	.footer-row {
+		background-color: #2D2D2D;
+	}
 }
 
+
+@media (max-width: 990px) { 
+.row {padding:25px;}
+.home_form {padding-right:0px !important;}
+.home_button {padding-left:0px !important;}
+.social-logins a {width:48%;}
+.social-logins a .content {margin-top: 20px;
+padding: 7px;
+width: 100% !important;
+height: 50px;}
+
+.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:-4px;}
+
+.tracking-url {width: 60%;
+float: left;}
+.user-stats .social-share .share-in-fb {margin-right: 2px;
+margin-left: 2px;}
+h1 {font-size:25px;}
+
+.user-stats .social-share {width:115px;}
+.bar-levels .col-md-4 {float:left; padding-right: 12%;}
+
+.welcome-form .welcome-message-block { min-height: inherit !important;}
+.welcome-form .subscribe-form {min-height:280px;}
+
+.right_section {border-left:0px;}
+
+}
+
+
+@media (max-width: 450px) { 
+.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top: 3px !important;
+padding-left: 50px;
+display: block;}
+
+.welcome-form .welcome-message-block {height:200px;}
+
+}
+
+@media (max-width: 770px) {
+.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:10px;}
+
+}
+ 

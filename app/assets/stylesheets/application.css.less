@@ -34,6 +34,11 @@ body {
   font-family: 'Caudex', serif;
 }
 
+.navbar-default {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .user-stats {
   background-color: rgba(255,255,255,0.9);
   padding-bottom: 30px;
@@ -51,12 +56,11 @@ body {
   }
   .social-share {
     height: 34px;
- 
-padding: 0px;
+    padding: 0px;
     padding-top: 4px;
     float: right;
+    width: 140px;
 
-width: 140px;
     a {
       color: white;
       background-color: #2ACAB2;
@@ -175,6 +179,9 @@ width: 140px;
     margin-bottom: 30px;
   }
   .social-logins {
+    a:hover {
+      text-decoration: none;
+    }
     .sl {
       &:hover {
         text-decoration: none;
@@ -286,9 +293,7 @@ left: 0px;
 
 
 
-.home_form_wrap {max-width: 900px; margin: 80px auto;   position: relative;
-  top: 50%;
-  transform: translateY(-50%);}
+.home_form_wrap { max-width: 900px; margin: 80px auto;   position: relative;}
   
 .f_left {float:left;}
 .f_right {float:right;}
@@ -334,49 +339,3 @@ border: 2px solid #ffffff;}
 
 
 
-
-@media (max-width: 990px) { 
-.row {padding:25px;}
-.home_form {padding-right:0px !important;}
-.home_button {padding-left:0px !important;}
-.social-logins a {width:48%;}
-.social-logins a .content {margin-top: 20px;
-padding: 7px;
-width: 100% !important;
-height: 50px;}
-
-.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:-4px;}
-
-.footer {height:auto !important;}
-
-.tracking-url {width: 60%;
-float: left;}
-.user-stats .social-share .share-in-fb {margin-right: 2px;
-margin-left: 2px;}
-h1 {font-size:25px;}
-
-.user-stats .social-share {width:115px;}
-.bar-levels .col-md-4 {float:left; padding-right: 12%;}
-
-.welcome-form .welcome-message-block { min-height: inherit !important;}
-.welcome-form .subscribe-form {min-height:280px;}
-
-.right_section {border-left:0px;}
-
-}
-
-
-@media (max-width: 450px) { 
-.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top: 3px !important;
-padding-left: 50px;
-display: block;}
-
-.welcome-form .welcome-message-block {height:200px;}
-
-}
-
-@media (max-width: 770px) {
-.welcome-form .social-logins .twitter .content span, .welcome-form .social-logins .fb .content span {top:10px;}
-
-}
- 
